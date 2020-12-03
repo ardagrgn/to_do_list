@@ -1,0 +1,107 @@
+
+
+GridLayout:
+
+    cols:1
+    RelativeLayout:
+
+        size_hint:( 0.3,0.3)
+
+        Button:
+            id: button
+            pos_hint: {"center_x": 0.5, "center_y":0.5}
+            text: "TO DO List"
+            size_hint: (0.5,1)
+            background_color: 0,1,0,1
+            on_release: app.write()
+
+
+
+    GridLayout:
+        cols:2
+
+        id: Katman_2
+
+        GridLayout:
+            id: Katman_3_1
+            cols: 2
+            Button:
+                size_hint: (0.1,0.1)
+                on_release: app.edit(0)
+                id:button
+            Label:
+                id: gorev
+                text: "Gorevini Yaz"
+
+
+
+            Button:
+                size_hint: (0.1,0.1)
+                on_release: app.edit(1)
+                id:button1
+
+            Label:
+                id: gorev1
+                text:"Gorevini yaz"
+
+            Button:
+                size_hint: (0.1,0.1)
+                on_release: app.edit(2)
+                id:button2
+            Label:
+                id: gorev2
+                text:"Gorevini yaz"
+
+            Button:
+                size_hint: (0.1,0.1)
+                on_release: app.edit(3)
+                id:button3
+            Label:
+
+                id: gorev3
+                text:"Gorevini yaz"
+
+
+        RelativeLayout:
+            id: Katman_3_2
+
+            TextInput:
+                id: yazi
+                size_hint: (1,0.3)
+                pos_hint: {"center_y": 0.75}
+
+            Button:
+                id: sil
+                size_hint: (1,0.1)
+                pos_hint: {"center_y": 0.4}
+                background_color: 1,0.3,0,1
+                text: "1. Sil"
+                on_release: app.delete(0)
+
+            Button:
+                id: sil_1
+                size_hint: (1,0.1)
+                pos_hint: {"center_y": 0.3}
+                background_color: 1,0.3,0,1
+                text: "2. Sil"
+                on_release: app.delete(1)
+
+            Button:
+                id: sil_2
+                size_hint: (1,0.1)
+                pos_hint: {"center_y": 0.2}
+                background_color: 1,0.3,0,1
+                text: "3. Sil"
+                on_release: app.delete(2)
+
+            Button:
+                id: sil_3
+                size_hint: (1,0.1)
+                pos_hint: {"center_y": 0.1}
+                background_color: 1,0.3,0,1
+                text: "4. Sil"
+                on_release: app.delete(3)
+
+
+
+
